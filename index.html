@@ -2,54 +2,62 @@
 <html>
 
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title></title>
-    <link rel='stylesheet' href='style.css' title='' type='' />
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title></title>
+  <link rel='stylesheet' href='style.css' title='' type='' />
 </head>
 
 <body>
-    <h1>Simple Calc</h1>
-    <div id='diventry'>
-        <input type='text' name='' id='entry' value='' />
+  <h2>Simple Calc</h2>
+  <div id='diventry'>
+    <input type='text' name='' id='entry' value='' />
+  </div>
+  <div id='grid-container'>
+    <div id='grid-items'><button style='background-color: #d4ffd4;' id='cbtn' onclick="clearing(clearBtn)" type='submit'>C</button>
     </div>
-    <div id='grid-container'>
-        <div id='grid-items'><button style='background-color: #d4ffd4;' id='cbtn' type='submit'>C</button>
-        </div>
-        <div id='grid-items'>
-            <button style='background-color: #d4ffd4;' type='submit' id='curlsbtn' onclick="get(curlsbtn)" value="()">() </button>
-        </div>
-        <div id='grid-items'><button style='background-color: #d4ffd4;' type='submit' onclick="get(modulus);" value="%" id='perc'>%</button>
-        </div>
-        <div id='grid-items'><button id='divbtn' style='background-color: #d4ffd4;' onclick="get(divide);" value="÷" type='submit'>÷</button>
-        </div>
-        <div id='grid-items'><button id='num7' type='submit' value='7' onclick='get(num7);'>7</button>
-        </div>
-        <div id='grid-items'><button id='num8' type='submit' value='8' onclick='get(num8);'>8</button>
-        </div>
-        <div id='grid-items'><button id='num9' type='submit' value='9' onclick='get(num9);'>9</button></div>
-        <div id='grid-items'><button style='background-color: #d4ffd4;' id='multiply' onclick="get(multiply);" type='submit' value="*">X</button>
-        </div>
-        <div id='grid-items'><button type='submit' id='num4' value='4' onclick='get(num4);'>4</button>
-        </div>
-        <div id='grid-items'><button id='num5' type='submit' value='5' onclick='get(num5);'>5</button>
-        </div>
-        <div id='grid-items'><button type='submit' id='num6' value='6' onclick='get(num6);'>6</button></div>
-        <div id='grid-items'><button style='background-color: #d4ffd4;' type='submit' id='minus' value='-' onclick="get(minus);">-</button>
-        </div>
-        <div id='grid-items'><button type='submit' id='num1' onclick='get(num1);' value='1'>1</button>
-        </div>
-        <div id='grid-items'><button type='submit' id='num2' value=2 onclick='get(num2);'>2</button>
-        </div>
-        <div id='grid-items'><button type='submit' id='num3' value=3 onclick='get(num3);'>3</button> </div>
-        <div id='grid-items'><button style='background-color: #d4ffd4;' type='submit' onclick="get(plus);" id='plus' value="+">+</button></div>
-        <div id='grid-items'><button type='submit'>+/-</button></div>
-        <div id='grid-items'><button type='submit' id='num0' onclick='get(num0);' value='0'>0</button></div>
-        <div id='grid-items'><button type='submit' id='point' onclick="get(point);" value=".">.</button></div>
-        <div id='grid-items'><button style='background-color: #00ff00' type='submit' id='equals'value='=' onclick='getAns(equals);'>=</button></div>
+    <div id='grid-items'>
+      <button style='background-color: #d4ffd4;' type='submit' id='curlsbtn' onclick="noSupport()" value="()">() </button>
     </div>
-    <input type="number" name="" id="output" value="" />
-    <script src='main.js' type='text/javascript' charset='utf-8'></script>
+    <div id='grid-items'><button style='background-color: #d4ffd4;' type='submit' onclick="get(modulus);" value="%" id='perc'>%</button>
+    </div>
+    <div id='grid-items'><button id='divbtn' style='background-color: #d4ffd4;' onclick="get(divide);" value="÷" type='submit'>÷</button>
+    </div>
+    <div id='grid-items'><button id='num7' type='submit' value='7' onclick='get(num7);'>7</button>
+    </div>
+    <div id='grid-items'><button id='num8' type='submit' value='8' onclick='get(num8);'>8</button>
+    </div>
+    <div id='grid-items'><button id='num9' type='submit' value='9' onclick='get(num9);'>9</button></div>
+    <div id='grid-items'><button style='background-color: #d4ffd4;' id='multiply' onclick="get(multiply);" type='submit' value="*">X</button>
+    </div>
+    <div id='grid-items'><button type='submit' id='num4' value='4' onclick='get(num4);'>4</button>
+    </div>
+    <div id='grid-items'><button id='num5' type='submit' value='5' onclick='get(num5);'>5</button>
+    </div>
+    <div id='grid-items'><button type='submit' id='num6' value='6' onclick='get(num6);'>6</button></div>
+    <div id='grid-items'><button style='background-color: #d4ffd4;' type='submit' id='minus' value='-' onclick="get(minus);">-</button>
+    </div>
+    <div id='grid-items'><button type='submit' id='num1' onclick='get(num1);' value='1'>1</button>
+    </div>
+    <div id='grid-items'><button type='submit' id='num2' value=2 onclick='get(num2);'>2</button>
+    </div>
+    <div id='grid-items'><button type='submit' id='num3' value=3 onclick='get(num3);'>3</button> </div>
+    <div id='grid-items'><button style='background-color: #d4ffd4;' type='submit' onclick="get(plus);" id='plus' value="+">+</button></div>
+    <div id='grid-items'><button type='submit' onclick="noSupport()">+/-</button></div>
+    <div id='grid-items'><button type='submit' id='num0' onclick='get(num0);' value='0'>0</button></div>
+    <div id='grid-items'><button type='submit' id='point' onclick="get(point);" value=".">.</button></div>
+    <div id='grid-items'><button style='background-color: #00ff00' type='submit' id='equals' value='=' onclick='getAns(equals);'>=</button></div>
+  </div>
+  <input type="text" name="" id="output" value="" />
+  <div>
+    <footer>
+      <h3>About project</h3>
+      name: Simple Calc <br />
+      Author: John Delvin<br />
+      <a href="https://github.com/John4650-hub">Project at github</a>
+    </footer>
+  </div>
+  <script src='main.js' type='text/javascript' charset='utf-8'></script>
 </body>
 
 </html>

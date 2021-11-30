@@ -21,20 +21,45 @@ const curlsbtn = document.getElementById('curlsbtn').value;
 const modulus = document.getElementById('perc').value;
 const point = document.getElementById('point').value;
 
-// Input for displaying numbers
-var entry = document.getElementById('entry');
 
+// Input & Output for displaying numbers
+var entry = document.getElementById('entry');
+var output = document.getElementById('output');
 
 
 function get(element)
 {
-    entry.value += element;
+  entry.value += element;
+  output.value = '';
+
 }
 
 let usr = '';
 
-function getAns()
+function getAns(element = equals)
 {
-    usr += entry.value
+  usr += entry.value
+  entry.value = '';
+  console.log(usr);
+  let a, b;
+  let ans = usr.trim()
+  let pls = ans.indexOf('+');
+  if (pls != -1) {
+    a = Number(ans.slice(0, pls));
+    b = Number(ans.slice(pls + 1, ans.length));
+    let sum = a + b;
+    output.value += sum;
     
+  }
+
+  let sbtrct = ans.indexOf('-');
+  if (sbtrct != -1) {
+    a = Number(ans.slice(0, sbtrct));
+    b = Number(ans.slice(sbtrct + 1, ans.length));
+    let diff = a - b;
+    output.value += diff;
+
+  }
+  usr = '';
+
 }
