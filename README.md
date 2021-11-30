@@ -1,4 +1,5 @@
-![Screenshot_20211126-183447](https://user-images.githubusercontent.com/84484398/143664427-ec87bfde-2682-41db-8e82-64097d55b02e.png)
+![20211130_135630](https://user-images.githubusercontent.com/84484398/144034890-36d08694-6fec-481d-943e-7b4b84a8db90.png)
+
 # Simple-calc
 This is a claculator 
 # Note
