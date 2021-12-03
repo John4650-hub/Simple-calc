@@ -17,11 +17,11 @@
     <div id='grid-items'><button style='background-color: #d4ffd4;' id='cbtn' onclick="clearing(clearBtn)" type='submit'>C</button>
     </div>
     <div id='grid-items'>
-      <button style='background-color: #d4ffd4;' type='submit' id='curlsbtn' onclick="noSupport()" value="()">() </button>
+      <button style='background-color: #d4ffd4;' type='submit' id='curlsbtn' onclick="get(curlsbtn)" value="()">() </button>
     </div>
     <div id='grid-items'><button style='background-color: #d4ffd4;' type='submit' onclick="get(modulus);" value="%" id='perc'>%</button>
     </div>
-    <div id='grid-items'><button id='divbtn' style='background-color: #d4ffd4;' onclick="get(divide);" value="÷" type='submit'>÷</button>
+    <div id='grid-items'><button id='divbtn' style='background-color: #d4ffd4;' onclick="get(divide);" value="/" type='submit'>/</button>
     </div>
     <div id='grid-items'><button id='num7' type='submit' value='7' onclick='get(num7);'>7</button>
     </div>
@@ -43,18 +43,20 @@
     </div>
     <div id='grid-items'><button type='submit' id='num3' value=3 onclick='get(num3);'>3</button> </div>
     <div id='grid-items'><button style='background-color: #d4ffd4;' type='submit' onclick="get(plus);" id='plus' value="+">+</button></div>
-    <div id='grid-items'><button type='submit' onclick="noSupport()">+/-</button></div>
+    <div id='grid-items'><button type='submit' value="(-" onclick=negativate()>+/-</button></div>
     <div id='grid-items'><button type='submit' id='num0' onclick='get(num0);' value='0'>0</button></div>
     <div id='grid-items'><button type='submit' id='point' onclick="get(point);" value=".">.</button></div>
     <div id='grid-items'><button style='background-color: #00ff00' type='submit' id='equals' value='=' onclick='getAns(equals);'>=</button></div>
   </div>
-  <input type="text" name="" id="output" value="" />
+  <input type="number" name="" id="output" value="" />
   <div>
     <footer>
-      <h3>About project</h3>
-      name: Simple Calc <br />
-      Author: John Delvin<br />
-      <a href="https://github.com/John4650-hub">Project at github</a>
+      <address>
+        <h3>About project</h3>
+        name: Simple Calc <br />
+        Authors: John Delvin and jamyJames<br />
+        <a href="https://github.com/John4650-hub">Project at github</a>
+      </address>
     </footer>
   </div>
   <script src='main.js' type='text/javascript' charset='utf-8'></script>
