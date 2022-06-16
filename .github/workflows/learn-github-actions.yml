@@ -1,12 +1,21 @@
-name: learn-github-actions
+name: Python package
+
 on: [push]
+
 jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest 
+  build:
+
+    runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v3
         with:
-          node-version: 14
-      - run: npm ci
-      - run: npm test
+          # Semantic version range syntax or exact version of a Python version
+          python-version: '3.x'
+          # Optional - x64 or x86 architecture, defaults to x64
+          architecture: 'x64'
+      # You can test your matrix by printing the current Python version
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
