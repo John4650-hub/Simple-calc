@@ -7,3 +7,4 @@ function verify(result: Result) {
     console.log("Failed")
   }
 }
+verify('pass');
