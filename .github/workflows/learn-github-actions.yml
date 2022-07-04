@@ -8,5 +8,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: npm install -g bats
-      - run: node --version
+      - run: npm install -g typescript
+      - run: tsc app.ts
