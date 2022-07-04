@@ -1,10 +1,5 @@
-type Result = "pass" | "fail"
- 
-function verify(result: Result) {
-  if (result === "pass") {
-    console.log("Passed")
-  } else {
-    console.log("Failed")
-  }
+function log(msg){
+  console.log(msg)
 }
-verify('pass');
+var ms = 'hello duse';
+log(ms)
